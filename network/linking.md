@@ -26,13 +26,19 @@ aed84ee21bde  training/webapp:latest python app.py  12 hours ago  Up 2 seconds 0
 $ sudo docker inspect -f "{{ .Name }}" aed84ee21bde
 /web
 ```
-註意：容器的名稱是唯一的。如果已經命名了一個叫 web 的容器，當你要再次使用 web 這個名稱的時候，需要先用`docker rm` 來刪除之前建立的同名容器。
+注意：容器的名稱是唯一的。如果已經命名了一個叫 web 的容器，當你要再次使用 web 這個名稱的時候，需要先用`docker rm` 來刪除之前建立的同名容器。
 
-在執行 `docker run` 的時候如果新增 `--rm` 標記，則容器在終止後會立刻刪除。註意，`--rm` 和 `-d` 參數不能同時使用。
+在執行 `docker run` 的時候如果新增 `--rm` 標記，則容器在終止後會立刻刪除。注意，`--rm` 和 `-d` 參數不能同時使用。
 
 ###容器互聯
 使用 `--link` 參數可以讓容器之間安全的進行交互。
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+下面先建立一個新的資料庫容器。
+=======
+>>>>>>> 669db71626040cb4ed020b7bd2df38fe8863d293
 下面先創建一個新的資料庫容器。
 ```
 $ sudo docker run -d --name db training/postgres
@@ -56,13 +62,29 @@ CONTAINER ID  IMAGE                     COMMAND               CREATED           
 349169744e49  training/postgres:latest  su postgres -c '/usr  About a minute ago  Up About a minute  5432/tcp                 db, web/db
 aed84ee21bde  training/webapp:latest    python app.py         16 hours ago        Up 2 minutes       0.0.0.0:49154->5000/tcp  web
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+可以看到自定義命名的容器，db 和 web，db 容器的 names 列有 db 也有 web/db。這表示 web 容器鏈接到 db 容器，web 容器將被允許存取 db 容器的訊息。
+
+Docker 在兩個互聯的容器之間建立了一個安全隧道，而且不用映射它們的端口到宿主主機上。在啟動 db 容器的時候並沒有使用 `-p` 和 `-P` 標記，從而避免了暴露資料庫端口到外部網路上。
+
+Docker 透過 2 種方式為容器公開連接訊息：
+* 環境變量
+=======
+>>>>>>> 669db71626040cb4ed020b7bd2df38fe8863d293
 可以看到自定義命名的容器，db 和 web，db 容器的 names 列有 db 也有 web/db。這表示 web 容器連接到 db 容器，web 容器將被允許連接 db 容器的信息。
 
 Docker 在兩個互聯的容器之間創建了一個安全隧道，而且不用映射它們的連接埠到從屬主機上。在啟動 db 容器的時候並沒有使用 `-p` 和 `-P` 標記，從而避免了暴露資料庫連接埠到外部網路上。
 
 Docker 通過 2 種方式為容器公開連接信息：
 * 環境變數
+<<<<<<< HEAD
 * 更新 `/etc/hosts` 文件
+=======
+>>>>>>> 189ba9741f2bb3f253b13b1b904ef942e78542b3
+* 更新 `/etc/hosts` 檔案
+>>>>>>> 669db71626040cb4ed020b7bd2df38fe8863d293
 
 使用 `env` 命令來查看 web 容器的環境變數
 ```
@@ -78,7 +100,15 @@ DB_PORT_5000_TCP_ADDR=172.17.0.5
 ```
 其中 DB_ 開頭的環境變數是供 web 容器連接 db 容器使用，前綴採用大寫的連接別名。
 
+<<<<<<< HEAD
 除了環境變數，Docker 還添加 host 訊息到父容器的 `/etc/hosts` 的文件。下面是父容器 web 的 hosts 文件
+=======
+<<<<<<< HEAD
+除了環境變量，Docker 還新增 host 訊息到父容器的 `/etc/hosts` 的檔案。下面是父容器 web 的 hosts 檔案
+=======
+除了環境變數，Docker 還添加 host 訊息到父容器的 `/etc/hosts` 的檔案。下面是父容器 web 的 hosts 檔案
+>>>>>>> 189ba9741f2bb3f253b13b1b904ef942e78542b3
+>>>>>>> 669db71626040cb4ed020b7bd2df38fe8863d293
 ```
 $ sudo docker run -t -i --rm --link db:db training/webapp /bin/bash
 root@aed84ee21bde:/opt/webapp# cat /etc/hosts
@@ -97,6 +127,6 @@ PING db (172.17.0.5): 48 data bytes
 56 bytes from 172.17.0.5: icmp_seq=2 ttl=64 time=0.256 ms
 ```
 用 ping 來測試db容器，它會解析成 `172.17.0.5`。
-*註意：官方的 ubuntu 映像檔預設沒有安裝 ping，需要自行安裝。
+*注意：官方的 ubuntu 映像檔預設沒有安裝 ping，需要自行安裝。
 
 使用者可以連接多個子容器到父容器，比如可以連接多個 web 到 db 容器上。

@@ -43,7 +43,7 @@
         指定容器網路的 mtu。預設為 1500。
 
     -p=""
-        指定 daemon 的 PID 文件路徑。預設為 /var/run/docker.pid。
+        指定 daemon 的 PID 檔案路徑。預設為 /var/run/docker.pid。
 
     -s=""
         強制 Docker 執行時使用指定的存儲驅動。
@@ -68,10 +68,10 @@ Docker 的命令可以采用 `docker-CMD` 或者 `docker CMD` 的方式執行。
         從一個容器的修改中建立一個新的映像檔
 
     docker-cp(1)
-        從容器中複製文件到宿主系統中
+        從容器中複製檔案到宿主系統中
 
     docker-diff(1)
-        檢查一個容器文件系統的修改
+        檢查一個容器檔案系統的修改
 
     docker-events(1)
         從服務端取得實時的事件
@@ -86,7 +86,7 @@ Docker 的命令可以采用 `docker-CMD` 或者 `docker CMD` 的方式執行。
         列出存在的映像檔
 
     docker-import(1)
-        匯入一個文件（典型為 tar 包）路徑或目錄來建立一個映像檔
+        匯入一個檔案（典型為 tar 包）路徑或目錄來建立一個映像檔
 
     docker-info(1)
         顯示一些相關的系統資訊
@@ -137,7 +137,7 @@ Docker 的命令可以采用 `docker-CMD` 或者 `docker CMD` 的方式執行。
         建立一個新容器，並在其中執行指定命令
 
     docker-save(1)
-        保存一個映像檔為 tar 包文件
+        保存一個映像檔為 tar 包檔案
 
     docker-search(1)
         在 Docker index 中搜索一個映像檔

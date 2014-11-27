@@ -13,7 +13,7 @@ $ sudo docker run -i -t --rm --net=none base /bin/bash
 root@12e343489d2f:/#
 ```
 
-找到程式號，然後建立網路名字空間的跟蹤文件。
+找到程式號，然後建立網路名字空間的跟蹤檔案。
 ```
 $ sudo docker inspect -f '{{.State.Pid}}' 1f1f4c1f931a
 2989
