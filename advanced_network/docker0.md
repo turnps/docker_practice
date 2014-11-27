@@ -5,7 +5,7 @@ Docker 默認指定了 `docker0` 接口 的 IP 地址和子網掩碼，讓主機
 * `--bip=CIDR` -- IP 地址加掩碼格式，例如 192.168.1.5/24
 * `--mtu=BYTES` -- 覆蓋默認的 Docker mtu 設定
 
-也可以在設定文件中設定 DOCKER_OPTS，然後重啟服務。
+也可以在設定檔案中設定 DOCKER_OPTS，然後重啟服務。
 由於目前 Docker 網橋是 Linux 網橋，使用者可以使用 `brctl show` 來查看網橋和端口連接訊息。
 ```
 $ sudo brctl show
