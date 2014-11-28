@@ -2,7 +2,7 @@
 
 ### 基本訊息
 [WordPress](https://en.wikipedia.org/wiki/WordPress) 是開源的 Blog 和內容管理系統框架，它基於 PhP 和 MySQL。
-該倉庫提供了 WordPress 4.0 版本的鏡像。
+該倉庫提供了 WordPress 4.0 版本的映像檔。
 
 ### 使用方法
 啟動容器需要 MySQL 的支援，預設連接埠為 `80`。

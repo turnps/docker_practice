@@ -47,7 +47,7 @@ command=/bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFO
 設定檔案包含目錄和程式，第一段 supervsord 設定軟件本身，使用 nodaemon 參數來執行。第二段包含要控制的 2 個服務。每一段包含一個服務的目錄和啟動這個服務的命令。
 
 ### 使用方法
-建立鏡像。
+建立映像檔。
 ```
 $ sudo docker build -t test/supervisord .
 ```
@@ -62,4 +62,4 @@ $ sudo docker run -p 22 -p 80 -t -i test/supervisords
 ```
 使用 `docker run` 來啟動我們建立的容器。使用多個 `-p` 來映射多個連接埠，這樣我們就能同時存取 ssh 和 apache 服務了。
 
-可以使用這個方法建立一個只有 ssh 服務的基礎鏡像，之後建立鏡像可以使用這個鏡像為基礎來建立
+可以使用這個方法建立一個只有 ssh 服務的基礎映像檔，之後建立映像檔可以使用這個映像檔為基礎來建立
