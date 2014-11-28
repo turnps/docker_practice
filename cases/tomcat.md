@@ -54,7 +54,7 @@ CMD ["/usr/bin/supervisord"]
 
     -v, --volume=[]            Bind mount a volume (e.g. from the host: -v /host:/container, from docker: -v /container)
 
-將本地磁盤映射到容器內部，它在主機和容器之間是實時變化的，所以我們更新程式、上傳代碼只需要更新物理主機的目錄就可以了
+將本地磁碟映射到容器內部，它在主機和容器之間是實時變化的，所以我們更新程式、上傳代碼只需要更新物理主機的目錄就可以了
 
 #### tomcat 和 weblogic 集群的實作
 tomcat 只要開啟多個容器即可

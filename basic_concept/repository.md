@@ -5,7 +5,7 @@
 倉庫分為公開倉庫（Public）和私有倉庫（Private）兩種形式。
 
 最大的公開倉庫是 [Docker Hub](https://hub.docker.com)，存放了數量龐大的映像檔供使用者下載。
-大陸的公開倉庫包括 [Docker Pool](http://www.dockerpool.com) 等，可以提供大陸使用者更穩定快速的訪問。
+大陸的公開倉庫包括 [Docker Pool](http://www.dockerpool.com) 等，可以提供大陸使用者更穩定快速的存取。
 
 當然，使用者也可以在本地網路內建立一個私有倉庫。
 

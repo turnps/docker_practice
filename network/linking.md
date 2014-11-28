@@ -69,7 +69,7 @@ CONTAINER ID  IMAGE                     COMMAND               CREATED           
 aed84ee21bde  training/webapp:latest    python app.py         16 hours ago        Up 2 minutes       0.0.0.0:49154->5000/tcp  web
 ```
 <<<<<<< HEAD
-可以看到自定義命名的容器，db 和 web，db 容器的 names 列有 db 也有 web/db。這表示 web 容器鏈接到 db 容器，web 容器將被允許訪問 db 容器的訊息。
+可以看到自定義命名的容器，db 和 web，db 容器的 names 列有 db 也有 web/db。這表示 web 容器鏈接到 db 容器，web 容器將被允許存取 db 容器的訊息。
 
 Docker 在兩個互聯的容器之間建立了一個安全隧道，而且不用映射它們的端口到宿主主機上。在啟動 db 容器的時候並沒有使用 `-p` 和 `-P` 標記，從而避免了暴露數據庫端口到外部網路上。
 
