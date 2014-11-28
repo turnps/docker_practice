@@ -66,7 +66,7 @@ $ sudo gunicorn -c contrib/gunicorn.py docker_registry.wsgi:application
 ```
 $ sudo gunicorn --access-logfile - --error-logfile - -k gevent -b 0.0.0.0:5000 -w 4 --max-requests 100 docker_registry.wsgi:application
 ```
-此時使用連結本地的 5000 端口，看到輸出 docker-registry 的版本訊息說明執行成功。
+此時使用連結本地的 5000 連接埠，看到輸出 docker-registry 的版本訊息說明執行成功。
 
 *註：`config/config_sample.yml` 檔案是範例設定檔案。
 

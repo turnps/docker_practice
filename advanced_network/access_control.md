@@ -19,13 +19,13 @@ $sysctl -w net.ipv4.ip_forward=1
 * 容器的網路拓撲是否已經互聯。默認情況下，所有容器都會被連接到 `docker0` 網橋上。
 * 本地系統的防火墻軟件 -- `iptables` 是否允許透過。
 
-#### 存取所有端口
+#### 存取所有連接埠
 當啟動 Docker 服務時候，默認會新增一條轉發策略到 iptables 的 FORWARD 鏈上。策略為透過（`ACCEPT`）還是禁止（`DROP`）取決於設定`--icc=true`（缺省值）還是 `--icc=false`。當然，如果手動指定 `--iptables=false` 則不會新增 `iptables` 規則。
 
 可見，默認情況下，不同容器之間是允許網路互通的。如果為了安全考慮，可以在 `/etc/default/docker` 檔案中設定 `DOCKER_OPTS=--icc=false` 來禁止它。
 
-#### 存取指定端口
-在透過 `-icc=false` 關閉網路存取後，還可以透過 `--link=CONTAINER_NAME:ALIAS` 選項來存取容器的開放端口。
+#### 存取指定連接埠
+在透過 `-icc=false` 關閉網路存取後，還可以透過 `--link=CONTAINER_NAME:ALIAS` 選項來存取容器的開放連接埠。
 
 例如，在啟動 Docker 服務時，可以同時使用 `icc=false --iptables=true` 參數來關閉允許相互的網路存取，並讓 Docker 可以修改系統中的 `iptables` 規則。
 
@@ -39,7 +39,7 @@ DROP       all  --  0.0.0.0/0            0.0.0.0/0
 ...
 ```
 
-之後，啟動容器（`docker run`）時使用 `--link=CONTAINER_NAME:ALIAS` 選項。Docker 會在 `iptable` 中為 兩個容器分別新增一條 `ACCEPT` 規則，允許相互存取開放的端口（取決於 Dockerfile 中的 EXPOSE 行）。
+之後，啟動容器（`docker run`）時使用 `--link=CONTAINER_NAME:ALIAS` 選項。Docker 會在 `iptable` 中為 兩個容器分別新增一條 `ACCEPT` 規則，允許相互存取開放的連接埠（取決於 Dockerfile 中的 EXPOSE 行）。
 
 當新增了 `--link=CONTAINER_NAME:ALIAS` 選項後，新增了 `iptables` 規則。
 ```

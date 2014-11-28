@@ -22,7 +22,7 @@ $ sudo docker logs -f nostalgic_morse
 -p（小寫的）則可以指定要映射的連接埠，並且在一個指定連接埠上只可以綁定一個容器。支援的格式有 `ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort`。
 
 ### 映射所有遠端地址
-使用 `hostPort:containerPort` 格式本地的 5000 端口映射到容器的 5000 端口，可以執行
+使用 `hostPort:containerPort` 格式本地的 5000 連接埠映射到容器的 5000 連接埠，可以執行
 ```
 $ sudo docker run -d -p 5000:5000 training/webapp python app.py
 ```
@@ -34,7 +34,7 @@ $ sudo docker run -d -p 5000:5000 training/webapp python app.py
 $ sudo docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
 ```
 ### 映射到指定地址的任意連接埠
-使用 `ip::containerPort` 綁定 localhost 的任意端口到容器的 5000 端口，本地主機會自動分配一個連接埠。
+使用 `ip::containerPort` 綁定 localhost 的任意連接埠到容器的 5000 連接埠，本地主機會自動分配一個連接埠。
 ```
 $ sudo docker run -d -p 127.0.0.1::5000 training/webapp python app.py
 ```

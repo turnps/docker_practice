@@ -19,7 +19,7 @@ COPY static-html-directory /usr/share/nginx/html
 $ sudo docker build -t some-content-nginx .
 $ sudo docker run --name some-nginx -d some-content-nginx
 ```
-開放端口，並映射到本地的 `8080` 端口。
+開放連接埠，並映射到本地的 `8080` 連接埠。
 ```
 sudo docker run --name some-nginx -d -p 8080:80 some-content-nginx
 ```

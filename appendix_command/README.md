@@ -34,7 +34,7 @@
         啟用容器間通信。預設為 true。
 
     --ip=""
-        綁定端口時候的預設 IP 地址。預設為 0.0.0.0。
+        綁定連接埠時候的預設 IP 地址。預設為 0.0.0.0。
 
     --iptables=true|false
         禁止 Docker 新增 iptables 規則。預設為 true。

@@ -6,7 +6,7 @@ Docker 默認指定了 `docker0` 接口 的 IP 地址和子網掩碼，讓主機
 * `--mtu=BYTES` -- 覆蓋默認的 Docker mtu 設定
 
 也可以在設定檔案中設定 DOCKER_OPTS，然後重啟服務。
-由於目前 Docker 網橋是 Linux 網橋，使用者可以使用 `brctl show` 來查看網橋和端口連接訊息。
+由於目前 Docker 網橋是 Linux 網橋，使用者可以使用 `brctl show` 來查看網橋和連接埠連接訊息。
 ```
 $ sudo brctl show
 bridge name     bridge id               STP enabled     interfaces
@@ -16,7 +16,7 @@ docker0         8000.3a1d7362b4ee       no              veth65f9
 *註：`brctl` 命令在 Debian、Ubuntu 中可以使用 `sudo apt-get install bridge-utils` 來安裝。
 
 
-每次建立一個新容器的時候，Docker 從可用的地址段中選擇一個空閑的 IP 地址分配給容器的 eth0 端口。使用本地主機上 `docker0` 接口的 IP 作為所有容器的默認網關。
+每次建立一個新容器的時候，Docker 從可用的地址段中選擇一個空閑的 IP 地址分配給容器的 eth0 連接埠。使用本地主機上 `docker0` 接口的 IP 作為所有容器的默認網關。
 ```
 $ sudo docker run -i -t --rm base /bin/bash
 $ ip addr show eth0
