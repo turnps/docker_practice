@@ -22,7 +22,7 @@ Docker 的 Registry 利用設定檔案提供了一些倉庫的模組（flavor）
 export SETTINGS_FLAVOR=dev
 ```
 
-另外，設定檔案中支持從環境變數中載入值，語法格式為 `_env:VARIABLENAME[:DEFAULT]`。
+另外，設定檔案中支援從環境變數中載入值，語法格式為 `_env:VARIABLENAME[:DEFAULT]`。
 
 ### 範例設定
 ```

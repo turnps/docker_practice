@@ -16,10 +16,10 @@
         在遠端 API 中啟用 CORS 頭。預設為 false。
 
     -b=""
-        將容器掛載到一個已存在的網橋上。指定為 'none' 時則禁用容器的網路。
+        將容器掛載到一個已存在的橋接器上。指定為 'none' 時則禁用容器的網路。
 
     --bip=""
-        讓動態建立的 docker0 採用指定的 CIDR 地址; 與 -b 選項互斥。
+        讓動態建立的 docker0 採用指定的 CIDR 位址; 與 -b 選項互斥。
 
     -d=true|false
         使用 daemon 模式。預設為 false。
@@ -34,7 +34,7 @@
         啟用容器間通信。預設為 true。
 
     --ip=""
-        綁定連接埠時候的預設 IP 地址。預設為 0.0.0.0。
+        綁定連接埠時候的預設 IP 位址。預設為 0.0.0.0。
 
     --iptables=true|false
         禁止 Docker 新增 iptables 規則。預設為 true。
@@ -52,7 +52,7 @@
         輸出版本資訊並退出。預設值為 false。
 
     --selinux-enabled=true|false
-        啟用 SELinux 支持。預設值為 false。SELinux 目前不支持 BTRFS 存儲驅動。
+        啟用 SELinux 支援。預設值為 false。SELinux 目前不支援 BTRFS 存儲驅動。
 
 
 ##命令

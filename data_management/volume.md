@@ -25,7 +25,7 @@ $ sudo docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp py
 上面的命令載入主機的 `/src/webapp` 目錄到容器的 `/opt/webapp`
 目錄。這個功能在進行測試的時候十分方便，比如使用者可以放置一些程式到本地目錄中，來查看容器是否正常工作。本地目錄的路徑必須是絕對路徑，如果目錄不存在 Docker 會自動為你建立它。
 
-*注意：Dockerfile 中不支持這種用法，這是因為 Dockerfile 是為了移植和分享用的。然而，不同作業系統的路徑格式不一樣，所以目前還不能支持。
+*注意：Dockerfile 中不支援這種用法，這是因為 Dockerfile 是為了移植和分享用的。然而，不同作業系統的路徑格式不一樣，所以目前還不能支援。
 
 Docker 掛載資料卷的預設權限是讀寫，使用者也可以透過 `:ro` 指定為唯讀。
 ```

@@ -25,7 +25,7 @@ RUN mkdir -p /var/log/supervisor
 ```
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ```
-新增 supervisord 的設定檔案，並復制設定檔案到對應目錄下面。
+新增 supervisord 的設定檔案，並複製設定檔案到對應目錄下面。
 
 ```
 EXPOSE 22 80
