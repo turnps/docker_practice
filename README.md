@@ -3,7 +3,7 @@ Docker —— 從入門到實踐
 
 v0.2.9
 
-[Docker](docker.com) 是個偉大的項目，它徹底釋放了虛擬化的，讓應用程式的分派、部署和管理都變得前所未有的有效率和輕鬆！
+[Docker](docker.com) 是個偉大的專案，它徹底釋放了虛擬化的，讓應用程式的分派、部署和管理都變得前所未有的有效率和輕鬆！
 
 本書既適用於具備基礎 Linux 知識的 Docker 初學者，也可供希望理解原理和實作的進階使用者參考。同時，書中給出的實踐案例，可供在進行實際部署時借鑒。
 
@@ -75,8 +75,8 @@ v0.2.9
 參考 [Swift 說明](https://github.com/tommy60703/the-swift-programming-language-in-traditional-chinese/)，欲翻譯章節就直接在 github 上發 Issue 中註明或直接發Pull Request 修改。m(_ _)m
 有些朋友可能不太清楚如何幫忙翻譯，我這裡寫一個簡單的流程，大家可以參考一下：
 
-1. 首先 fork 我的項目
-2. 把 fork 過去的項目也就是你的項目 clone 到你的本地
+1. 首先 fork 我的專案
+2. 把 fork 過去的專案也就是你的專案 clone 到你的本地
 3. 在命令行執行 `git branch develop` 來建立一個新分支
 4. 執行 `git checkout develop` 來切換到新分支
 5. 執行 `git remote add upstream https://github.com/philipz/docker_practice` 把我的庫新增為遠端庫
