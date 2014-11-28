@@ -5,7 +5,7 @@ Linux 核心自 2.2 版本起就支持能力機制，它將權限劃分為更加
 
 例如，一個 Web 服務程式只需要綁定一個低於 1024 的連接埠的權限，並不需要 root 權限。那麽它只需要被授權 `net_bind_service` 能力即可。此外，還有很多其他的類似能力來避免程式取得 root 權限。
 
-默認情況下，Docker 啟動的容器被嚴格限制只允許使用核心的一部分能力。
+預設情況下，Docker 啟動的容器被嚴格限制只允許使用核心的一部分能力。
 
 使用能力機制對加強 Docker 容器的安全有很多好處。通常，在伺服器上會執行一堆需要特權權限的程式，包括有 ssh、cron、syslogd、硬體管理工具模組（例如負載模組）、網路設定工具等等。容器跟這些程式是不同的，因為幾乎所有的特權程式都由容器以外的支持系統來進行管理。
 * ssh 存取被主機上ssh服務來管理；
@@ -22,5 +22,5 @@ Linux 核心自 2.2 版本起就支持能力機制，它將權限劃分為更加
 
 這樣，就算攻擊者在容器中取得了 root 權限，也不能獲得本地主機的較高權限，能進行的破壞也有限。
 
-默認情況下，Docker採用 [白名單](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 機制，禁用 [必需功能](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 之外的其它權限。
+預設情況下，Docker採用 [白名單](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 機制，禁用 [必需功能](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 之外的其它權限。
 當然，使用者也可以根據自身需求來為 Docker 容器啟用額外的權限。

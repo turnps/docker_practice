@@ -5,7 +5,7 @@
 該倉庫提供了 Ubuntu從12.04 ~ 14.10 各個版本的鏡像。
 
 ### 使用方法
-默認會啟動一個最小化的 Ubuntu 環境。
+預設會啟動一個最小化的 Ubuntu 環境。
 ```
 $ sudo docker run --name some-ubuntu -i -t ubuntu
 root@523c70904d54:/#

@@ -1,9 +1,9 @@
 ## 設定 docker0 網橋
-Docker 服務默認會建立一個 `docker0` 網橋（其上有一個 `docker0` 內部接口），它在內核層連通了其他的物理或虛擬網卡，這就將所有容器和本地主機都放到同一個物理網路。
+Docker 服務預設會建立一個 `docker0` 網橋（其上有一個 `docker0` 內部界面），它在核心層連通了其他的物理或虛擬網卡，這就將所有容器和本地主機都放到同一個物理網路。
 
-Docker 默認指定了 `docker0` 接口 的 IP 地址和子網掩碼，讓主機和容器之間可以透過網橋相互通信，它還給出了 MTU（接口允許接收的最大傳輸單元），通常是 1500 Bytes，或宿主主機網路路由上支持的默認值。這些值都可以在服務啟動的時候進行設定。
+Docker 預設指定了 `docker0` 界面 的 IP 地址和子網掩碼，讓主機和容器之間可以透過網橋相互通信，它還給出了 MTU（界面允許接收的最大傳輸單元），通常是 1500 Bytes，或宿主主機網路路由上支持的預設值。這些值都可以在服務啟動的時候進行設定。
 * `--bip=CIDR` -- IP 地址加掩碼格式，例如 192.168.1.5/24
-* `--mtu=BYTES` -- 覆蓋默認的 Docker mtu 設定
+* `--mtu=BYTES` -- 覆蓋預設的 Docker mtu 設定
 
 也可以在設定檔案中設定 DOCKER_OPTS，然後重啟服務。
 由於目前 Docker 網橋是 Linux 網橋，使用者可以使用 `brctl show` 來查看網橋和連接埠連接訊息。
@@ -16,7 +16,7 @@ docker0         8000.3a1d7362b4ee       no              veth65f9
 *註：`brctl` 命令在 Debian、Ubuntu 中可以使用 `sudo apt-get install bridge-utils` 來安裝。
 
 
-每次建立一個新容器的時候，Docker 從可用的地址段中選擇一個空閑的 IP 地址分配給容器的 eth0 連接埠。使用本地主機上 `docker0` 接口的 IP 作為所有容器的默認網關。
+每次建立一個新容器的時候，Docker 從可用的地址段中選擇一個空閑的 IP 地址分配給容器的 eth0 連接埠。使用本地主機上 `docker0` 界面的 IP 作為所有容器的預設網關。
 ```
 $ sudo docker run -i -t --rm base /bin/bash
 $ ip addr show eth0

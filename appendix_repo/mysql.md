@@ -5,7 +5,7 @@
 該倉庫提供了 MySQL 各個版本的鏡像，包括 5.6 系列、5.7 系列等。
 
 ### 使用方法
-默認會在 `3306` 連接埠啟動資料庫。
+預設會在 `3306` 連接埠啟動資料庫。
 ```
 $ sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword -d mysql
 ```

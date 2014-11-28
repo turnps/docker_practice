@@ -1,5 +1,5 @@
 ## 自定義網橋
-除了默認的 `docker0` 網橋，使用者也可以指定網橋來連接各個容器。
+除了預設的 `docker0` 網橋，使用者也可以指定網橋來連接各個容器。
 
 在啟動 Docker 服務的時候，使用 `-b BRIDGE`或`--bridge=BRIDGE` 來指定使用的網橋。
 
@@ -23,7 +23,7 @@ $ ip addr show bridge0
     inet 192.168.5.1/24 scope global bridge0
        valid_lft forever preferred_lft forever
 ```
-設定 Docker 服務，默認橋接到建立的網橋上。
+設定 Docker 服務，預設橋接到建立的網橋上。
 ```
 $ echo 'DOCKER_OPTS="-b=bridge0"' >> /etc/default/docker
 $ sudo service docker start

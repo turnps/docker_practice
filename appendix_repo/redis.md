@@ -5,7 +5,7 @@
 該倉庫提供了 Redis 2.6 ~ 2.8.9 各個版本的鏡像。
 
 ### 使用方法
-默認會在 `6379` 連接埠啟動資料庫。
+預設會在 `6379` 連接埠啟動資料庫。
 ```
 $ sudo docker run --name some-redis -d redis
 ```
@@ -13,7 +13,7 @@ $ sudo docker run --name some-redis -d redis
 ```
 $ sudo docker run --name some-redis -d redis redis-server --appendonly yes
 ```
-默認資料存儲位置在 `VOLUME/data`。可以使用 `--volumes-from some-volume-container` 或 `-v /docker/host/dir:/data` 將資料存放到本地。
+預設資料存儲位置在 `VOLUME/data`。可以使用 `--volumes-from some-volume-container` 或 `-v /docker/host/dir:/data` 將資料存放到本地。
 
 使用其他應用連接到容器，可以用
 ```

@@ -5,7 +5,7 @@
 該倉庫提供了 WordPress 4.0 版本的鏡像。
 
 ### 使用方法
-啟動容器需要 MySQL 的支持，默認連接埠為 `80`。
+啟動容器需要 MySQL 的支持，預設連接埠為 `80`。
 ```
 $ sudo docker run --name some-wordpress --link some-mysql:mysql -d wordpress
 ```

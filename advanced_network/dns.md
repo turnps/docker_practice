@@ -26,4 +26,4 @@ tmpfs on /etc/resolv.conf type tmpfs ...
 
 `--dns-search=DOMAIN`
 設定容器的搜索域，當設定搜索域為 `.example.com` 時，在搜索一個名為 host 的主機時，DNS 不僅搜索host，還會搜索 `host.example.com`。
-注意：如果沒有上述最後 2 個選項，Docker 會默認用主機上的 `/etc/resolv.conf` 來設定容器。
+注意：如果沒有上述最後 2 個選項，Docker 會預設用主機上的 `/etc/resolv.conf` 來設定容器。

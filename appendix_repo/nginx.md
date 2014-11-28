@@ -24,7 +24,7 @@ $ sudo docker run --name some-nginx -d some-content-nginx
 sudo docker run --name some-nginx -d -p 8080:80 some-content-nginx
 ```
 
-Nginx的默認設定檔案路徑為 `/etc/nginx/nginx.conf`，可以透過映射它來使用本地的設定檔案，例如
+Nginx的預設設定檔案路徑為 `/etc/nginx/nginx.conf`，可以透過映射它來使用本地的設定檔案，例如
 ```
 docker run --name some-nginx -v /some/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
 ```
