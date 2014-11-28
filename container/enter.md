@@ -1,8 +1,19 @@
 ## 進入容器
 在使用 `-d` 參數時，容器啟動後會進入後臺。
 某些時候需要進入容器進行操作，有很多種方法，包括使用 `docker attach` 命令或 `nsenter` 工具等。
+### exec 命令
+`docker exec` 是Docker內建的命令。下面示範如何使用該命令。
+```
+$ sudo docker run -idt ubuntu
+243c32535da7d142fb0e6df616a3c3ada0b8ab417937c853a9e1c251f499f550
+$ sudo docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+243c32535da7        ubuntu:latest       "/bin/bash"         18 seconds ago      Up 17 seconds                           nostalgic_hypatia
+$sudo docker exec -ti nostalgic_hypatia bash
+root@243c32535da7:/#
+```
 ### attach 命令
-`docker attach` 是Docker內建的命令。下面示例如何使用該命令。
+`docker attach` 亦是Docker內建的命令。下面示例如何使用該命令。
 ```
 $ sudo docker run -idt ubuntu
 243c32535da7d142fb0e6df616a3c3ada0b8ab417937c853a9e1c251f499f550
