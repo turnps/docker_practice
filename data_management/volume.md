@@ -27,7 +27,7 @@ $ sudo docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp py
 
 *注意：Dockerfile 中不支持這種用法，這是因為 Dockerfile 是為了移植和分享用的。然而，不同作業系統的路徑格式不一樣，所以目前還不能支持。
 
-Docker 掛載資料卷的默認權限是讀寫，使用者也可以透過 `:ro` 指定為唯讀。
+Docker 掛載資料卷的預設權限是讀寫，使用者也可以透過 `:ro` 指定為唯讀。
 ```
 $ sudo docker run -d -P --name web -v /src/webapp:/opt/webapp:ro
 training/webapp python app.py

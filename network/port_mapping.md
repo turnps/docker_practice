@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-## 外部訪問容器
-=======
 ## 外部存取容器
-<<<<<<< HEAD
-容器中可以執行一些網路應用，要讓外部也可以存取這些應用，可以透過 `-P` 或 `-p` 參數來指定端口映射。
-=======
->>>>>>> 669db71626040cb4ed020b7bd2df38fe8863d293
-容器中可以執行一些網路應用，要讓外部也可以連結這些應用，可以通過 `-P` 或 `-p` 參數來指定連接埠映射。
+
+容器中可以執行一些網路應用，要讓外部也可以存取這些應用，可以通過 `-P` 或 `-p` 參數來指定連接埠映射。
 
 當使用 -P 參數時，Docker 會隨機映射一個 `49000~49900` 的連接埠到內部容器開放的網路連接埠。
 
@@ -28,7 +22,7 @@ $ sudo docker logs -f nostalgic_morse
 -p（小寫的）則可以指定要映射的連接埠，並且在一個指定連接埠上只可以綁定一個容器。支援的格式有 `ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort`。
 
 ### 映射所有遠端地址
-使用 `hostPort:containerPort` 格式本地的 5000 端口映射到容器的 5000 端口，可以執行
+使用 `hostPort:containerPort` 格式本地的 5000 連接埠映射到容器的 5000 連接埠，可以執行
 ```
 $ sudo docker run -d -p 5000:5000 training/webapp python app.py
 ```
@@ -40,7 +34,7 @@ $ sudo docker run -d -p 5000:5000 training/webapp python app.py
 $ sudo docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
 ```
 ### 映射到指定地址的任意連接埠
-使用 `ip::containerPort` 綁定 localhost 的任意端口到容器的 5000 端口，本地主機會自動分配一個連接埠。
+使用 `ip::containerPort` 綁定 localhost 的任意連接埠到容器的 5000 連接埠，本地主機會自動分配一個連接埠。
 ```
 $ sudo docker run -d -p 127.0.0.1::5000 training/webapp python app.py
 ```
@@ -54,16 +48,8 @@ $ sudo docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py
 $ docker port nostalgic_morse 5000
 127.0.0.1:49155.
 ```
-<<<<<<< HEAD
-註意：
-=======
 注意：
-<<<<<<< HEAD
-* 容器有自己的內部網路和 ip 地址（使用 `docker inspect` 可以取得所有的變量，Docker 還可以有一個可變的網路設定。）
-* -p 標記可以多次使用來綁定多個端口
-=======
->>>>>>> 669db71626040cb4ed020b7bd2df38fe8863d293
-* 容器有自己的內部網路和 ip 地址（使用 `docker inspect` 可以獲取所有的變數，Docker 還可以有一個可變的網路配置。）
+* 容器有自己的內部網路和 ip 地址（使用 `docker inspect` 可以獲取所有的變數，Docker 還可以有一個可變的網路設定。）
 * -p 標記可以多次使用來綁定多個連接埠
 
 例如

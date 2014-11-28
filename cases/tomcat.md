@@ -4,7 +4,7 @@
 ```
 docker run -t -i -v /home:/opt/data  --name mk_tomcat ubuntu /bin/bash
 ```
-這條命令掛載本地 home 目錄到容器的 /opt/data 目錄，容器內目錄若不存在，則會自動建立。接下來就是 tomcat 的基本設定，jdk 環境變量設置好之後，將 tomcat 程式放到 /opt/apache-tomcat 下面
+這條命令掛載本地 home 目錄到容器的 /opt/data 目錄，容器內目錄若不存在，則會自動建立。接下來就是 tomcat 的基本設定，jdk 環境變量設定好之後，將 tomcat 程式放到 /opt/apache-tomcat 下面
 編輯 /etc/supervisor/conf.d/supervisor.conf 檔案，新增 tomcat 項
 ```
 [supervisord]

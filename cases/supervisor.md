@@ -31,7 +31,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 22 80
 CMD ["/usr/bin/supervisord"]
 ```
-這裡我們映射了 22 和 80 端口，使用 supervisord 的可執行路徑啟動服務。
+這裡我們映射了 22 和 80 連接埠，使用 supervisord 的可執行路徑啟動服務。
 
 
 ### supervisor設定檔案內容
@@ -60,6 +60,6 @@ $ sudo docker run -p 22 -p 80 -t -i test/supervisords
 2013-11-25 18:53:23,346 INFO spawned: 'sshd' with pid 6
 2013-11-25 18:53:23,349 INFO spawned: 'apache2' with pid 7
 ```
-使用 `docker run` 來啟動我們建立的容器。使用多個 `-p` 來映射多個端口，這樣我們就能同時存取 ssh 和 apache 服務了。
+使用 `docker run` 來啟動我們建立的容器。使用多個 `-p` 來映射多個連接埠，這樣我們就能同時存取 ssh 和 apache 服務了。
 
 可以使用這個方法建立一個只有 ssh 服務的基礎鏡像，之後建立鏡像可以使用這個鏡像為基礎來建立

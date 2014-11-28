@@ -19,7 +19,7 @@
         將容器掛載到一個已存在的網橋上。指定為 'none' 時則禁用容器的網路。
 
     --bip=""
-        讓動態建立的 docker0 采用指定的 CIDR 地址; 與 -b 選項互斥。
+        讓動態建立的 docker0 採用指定的 CIDR 地址; 與 -b 選項互斥。
 
     -d=true|false
         使用 daemon 模式。預設為 false。
@@ -34,7 +34,7 @@
         啟用容器間通信。預設為 true。
 
     --ip=""
-        綁定端口時候的預設 IP 地址。預設為 0.0.0.0。
+        綁定連接埠時候的預設 IP 地址。預設為 0.0.0.0。
 
     --iptables=true|false
         禁止 Docker 新增 iptables 規則。預設為 true。
@@ -56,7 +56,7 @@
 
 
 ##命令
-Docker 的命令可以采用 `docker-CMD` 或者 `docker CMD` 的方式執行。兩者一致。
+Docker 的命令可以採用 `docker-CMD` 或者 `docker CMD` 的方式執行。兩者一致。
 
     docker-attach(1)
         依附到一個正在執行的容器中。

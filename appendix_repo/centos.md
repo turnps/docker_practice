@@ -5,7 +5,7 @@
 該倉庫提供了 CentOS 從 5 ~ 7 各個版本的鏡像。
 
 ### 使用方法
-默認會啟動一個最小化的 CentOS 環境。
+預設會啟動一個最小化的 CentOS 環境。
 ```
 $ sudo docker run --name some-centos -i -t centos bash
 bash-4.2#
