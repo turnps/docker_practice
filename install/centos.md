@@ -1,6 +1,6 @@
 ## CentOS 系列安裝 Docker
 
-Docker 支持 CentOS6 及以後的版本。
+Docker 支援 CentOS6 及以後的版本。
 
 ### CentOS6
 對於 CentOS6，可以使用 [EPEL](https://fedoraproject.org/wiki/EPEL) 套件庫安裝 Docker，命令以下

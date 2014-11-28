@@ -134,7 +134,7 @@ ouruser/sinatra     v2      5db5f8471261  11 hours ago   446.7 MB
 
 ### 從本機導入
 要從本機導入一個映像檔，可以使用 openvz（容器虛擬化的先鋒技術）的模板來建立：
-openvz 的模板下載地址為 http://openvz.org/Download/templates/precreated。
+openvz 的模板下載位址為 http://openvz.org/Download/templates/precreated。
 
 比如，先下載一個 ubuntu-14.04 的映像檔，之後使用以下命令導入：
 ```
