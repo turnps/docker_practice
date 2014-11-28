@@ -12,7 +12,7 @@
 $ sudo docker run -d -p 5000:5000 registry
 ```
 這將使用官方的 registry 映像檔來啟動本地的私有倉庫。
-使用者可以透過指定參數來設定私有倉庫位置，例如設定映像檔存儲到 Amazon S3 服務。
+使用者可以透過指定參數來設定私有倉庫位置，例如設定映像檔儲存到 Amazon S3 服務。
 ```
 $ sudo docker run \
          -e SETTINGS_FLAVOR=s3 \

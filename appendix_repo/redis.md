@@ -1,7 +1,7 @@
 ## [Redis](https://registry.hub.docker.com/_/redis/)
 
 ### 基本訊息
-[Redis](https://en.wikipedia.org/wiki/Redis) 是開源的內存 Key-Value 資料庫實作。
+[Redis](https://en.wikipedia.org/wiki/Redis) 是開源的記憶體 Key-Value 資料庫實作。
 該倉庫提供了 Redis 2.6 ~ 2.8.9 各個版本的映像檔。
 
 ### 使用方法
@@ -9,11 +9,11 @@
 ```
 $ sudo docker run --name some-redis -d redis
 ```
-另外還可以啟用 [持久存儲](http://redis.io/topics/persistence)。
+另外還可以啟用 [持久儲存](http://redis.io/topics/persistence)。
 ```
 $ sudo docker run --name some-redis -d redis redis-server --appendonly yes
 ```
-預設資料存儲位置在 `VOLUME/data`。可以使用 `--volumes-from some-volume-container` 或 `-v /docker/host/dir:/data` 將資料存放到本地。
+預設資料儲存位置在 `VOLUME/data`。可以使用 `--volumes-from some-volume-container` 或 `-v /docker/host/dir:/data` 將資料存放到本地。
 
 使用其他應用連接到容器，可以用
 ```

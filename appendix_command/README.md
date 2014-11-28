@@ -46,13 +46,13 @@
         指定 daemon 的 PID 檔案路徑。預設為 /var/run/docker.pid。
 
     -s=""
-        強制 Docker 執行時使用指定的存儲驅動。
+        強制 Docker 執行時使用指定的儲存驅動。
 
     -v=true|false
         輸出版本資訊並退出。預設值為 false。
 
     --selinux-enabled=true|false
-        啟用 SELinux 支援。預設值為 false。SELinux 目前不支援 BTRFS 存儲驅動。
+        啟用 SELinux 支援。預設值為 false。SELinux 目前不支援 BTRFS 儲存驅動。
 
 
 ##命令

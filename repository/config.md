@@ -13,7 +13,7 @@ Docker 的 Registry 利用設定檔案提供了一些倉庫的模組（flavor）
 * `swift`：儲存資料到 OpenStack Swift 服務
 * `glance`：儲存資料到 OpenStack Glance 服務，本地檔案系統為後備
 * `glance-swift`：儲存資料到 OpenStack Glance 服務，Swift 為後備
-* `elliptics`：儲存資料到 Elliptics key/value 存儲
+* `elliptics`：儲存資料到 Elliptics key/value 儲存
 
 使用者也可以新增自定義的模版段。
 

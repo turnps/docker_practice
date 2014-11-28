@@ -1,7 +1,7 @@
 ## [Nginx](https://registry.hub.docker.com/_/nginx/)
 
 ### 基本訊息
-[Nginx](https://en.wikipedia.org/wiki/Nginx) 是開源的有效率的 Web 伺服器實作，支援 HTTP、HTTPS、SMTP、POP3、IMAP 等協議。
+[Nginx](https://en.wikipedia.org/wiki/Nginx) 是開源的、有效率的 Web 伺服器實作，支援 HTTP、HTTPS、SMTP、POP3、IMAP 等協議。
 該倉庫提供了 Nginx 1.0 ~ 1.7 各個版本的映像檔。
 
 ### 使用方法
@@ -14,7 +14,7 @@ $ sudo docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d
 FROM nginx
 COPY static-html-directory /usr/share/nginx/html
 ```
-之後生成新的映像檔，並啟動一個容器。
+之後建立新的映像檔，並啟動一個容器。
 ```
 $ sudo docker build -t some-content-nginx .
 $ sudo docker run --name some-nginx -d some-content-nginx

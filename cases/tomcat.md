@@ -49,7 +49,7 @@ CMD ["/usr/bin/supervisord"]
 ```
 
 ### tomcat/weblogic 映像檔的使用
-#### 存儲的使用
+#### 儲存的使用
 在啟動的時候，使用 `-v` 參數
 
     -v, --volume=[]            Bind mount a volume (e.g. from the host: -v /host:/container, from docker: -v /container)

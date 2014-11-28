@@ -1,7 +1,7 @@
 ## [MySQL](https://registry.hub.docker.com/_/mysql/)
 
 ### 基本訊息
-[MySQL](https://en.wikipedia.org/wiki/MySQL) 是開源的關系資料庫實作。
+[MySQL](https://en.wikipedia.org/wiki/MySQL) 是開源的關聯資料庫實作。
 該倉庫提供了 MySQL 各個版本的映像檔，包括 5.6 系列、5.7 系列等。
 
 ### 使用方法
