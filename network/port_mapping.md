@@ -1,24 +1,16 @@
 ## 外部訪問容器
-<<<<<<< HEAD
-容器中可以執行一些網路應用，要讓外部也可以訪問這些應用，可以透過 `-P` 或 `-p` 參數來指定端口映射。
-=======
 容器中可以執行一些網路應用，要讓外部也可以連結這些應用，可以通過 `-P` 或 `-p` 參數來指定連接埠映射。
->>>>>>> 189ba9741f2bb3f253b13b1b904ef942e78542b3
 
 當使用 -P 參數時，Docker 會隨機映射一個 `49000~49900` 的連接埠到內部容器開放的網路連接埠。
 
-使用 `docker ps` 可以看到，本地主機的 49155 被映射到了容器的 5000 連接埠。此時連結本機的 49115 連接埠即可連結容器內 web 應用提供的界面。
+使用 `docker ps` 可以看到，本地主機的 49155 被映射到了容器的 5000 連接埠。此時連結本機的 49155 連接埠即可連結容器內 web 應用提供的界面。
 ```
 $ sudo docker run -d -P training/webapp python app.py
 $ sudo docker ps -l
 CONTAINER ID  IMAGE                   COMMAND       CREATED        STATUS        PORTS                    NAMES
 bc533791f3f5  training/webapp:latest  python app.py 5 seconds ago  Up 2 seconds  0.0.0.0:49155->5000/tcp  nostalgic_morse
 ```
-<<<<<<< HEAD
 同樣的，可以透過 `docker logs` 命令來查看應用的訊息。
-=======
-同樣的，可以通過 `docker logs` 命令來查看應用的訊息。
->>>>>>> 189ba9741f2bb3f253b13b1b904ef942e78542b3
 ```
 $ sudo docker logs -f nostalgic_morse
 * Running on http://0.0.0.0:5000/
@@ -49,25 +41,15 @@ $ sudo docker run -d -p 127.0.0.1::5000 training/webapp python app.py
 ```
 $ sudo docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py
 ```
-<<<<<<< HEAD
-### 查看映射端口設定
-使用 `docker port` 來查看當前映射的端口設定，也可以查看到綁定的地址
-=======
 ### 查看映射連接埠配置
-使用 `docker port` 來查看當前映射的連接埠配置，也可以查看到綁定的地址
->>>>>>> 189ba9741f2bb3f253b13b1b904ef942e78542b3
+使用 `docker port` 來查看當前映射的連接埠配置，也可以查看到綁定的位址
 ```
 $ docker port nostalgic_morse 5000
 127.0.0.1:49155.
 ```
 註意：
-<<<<<<< HEAD
-* 容器有自己的內部網路和 ip 地址（使用 `docker inspect` 可以取得所有的變量，Docker 還可以有一個可變的網路設定。）
-* -p 標記可以多次使用來綁定多個端口
-=======
 * 容器有自己的內部網路和 ip 地址（使用 `docker inspect` 可以獲取所有的變數，Docker 還可以有一個可變的網路配置。）
 * -p 標記可以多次使用來綁定多個連接埠
->>>>>>> 189ba9741f2bb3f253b13b1b904ef942e78542b3
 
 例如
 ```
