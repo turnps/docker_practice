@@ -22,5 +22,5 @@ Linux 核心自 2.2 版本起就支持能力機制，它將權限劃分為更加
 
 這樣，就算攻擊者在容器中取得了 root 權限，也不能獲得本地主機的較高權限，能進行的破壞也有限。
 
-默認情況下，Docker采用 [白名單](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 機制，禁用 [必需功能](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 之外的其它權限。
+默認情況下，Docker採用 [白名單](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 機制，禁用 [必需功能](https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go) 之外的其它權限。
 當然，使用者也可以根據自身需求來為 Docker 容器啟用額外的權限。
