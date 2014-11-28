@@ -5,7 +5,7 @@
 docker run -t -i -v /home:/opt/data  --name mk_tomcat ubuntu /bin/bash
 ```
 這條命令掛載本地 home 目錄到容器的 /opt/data 目錄，容器內目錄若不存在，則會自動建立。接下來就是 tomcat 的基本設定，jdk 環境變量設置好之後，將 tomcat 程式放到 /opt/apache-tomcat 下面
-編輯 /etc/supervisor/conf.d/supervisor.conf 文件，新增 tomcat 項
+編輯 /etc/supervisor/conf.d/supervisor.conf 檔案，新增 tomcat 項
 ```
 [supervisord]
 nodaemon=true
@@ -18,7 +18,7 @@ command=/usr/sbin/sshd -D
 docker commit  ac6474aeb31d  tomcat
 ```
 
-新建 tomcat 文件夾，新建 Dockerfile。
+新建 tomcat 檔案夾，新建 Dockerfile。
 ```
 FROM mk_tomcat
 EXPOSE  22 8080
@@ -30,7 +30,7 @@ docker build tomcat tomcat
 ```
 ### 安裝 weblogic 鏡像
 
-步驟和 tomcat 基本一致，這裡貼一下設定文件
+步驟和 tomcat 基本一致，這裡貼一下設定檔案
 ```
 supervisor.conf
 [supervisord]

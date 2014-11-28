@@ -59,7 +59,7 @@ root@243c32535da7:/#
 $ wget -P ~ https://github.com/yeasy/docker_practice/raw/master/_local/.bashrc_docker;
 $ echo "[ -f ~/.bashrc_docker ] && . ~/.bashrc_docker" >> ~/.bashrc; source ~/.bashrc
 ```
-這個文件中定義了很多方便使用 Docker 的命令，例如 `docker-pid` 可以取得某個容器的 PID；而 `docker-enter` 可以進入容器或直接在容器內執行命令。
+這個檔案中定義了很多方便使用 Docker 的命令，例如 `docker-pid` 可以取得某個容器的 PID；而 `docker-enter` 可以進入容器或直接在容器內執行命令。
 ```
 $ echo $(docker-pid <container>)
 $ docker-enter <container> ls

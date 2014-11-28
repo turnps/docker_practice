@@ -25,7 +25,7 @@ RUN mkdir -p /var/log/supervisor
 ```
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ```
-新增 supervisord 的設定文件，並復制設定文件到對應目錄下面。
+新增 supervisord 的設定檔案，並復制設定檔案到對應目錄下面。
 
 ```
 EXPOSE 22 80
@@ -34,7 +34,7 @@ CMD ["/usr/bin/supervisord"]
 這裡我們映射了 22 和 80 端口，使用 supervisord 的可執行路徑啟動服務。
 
 
-### supervisor設定文件內容
+### supervisor設定檔案內容
 ```
 [supervisord]
 nodaemon=true
@@ -44,7 +44,7 @@ command=/usr/sbin/sshd -D
 [program:apache2]
 command=/bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
 ```
-設定文件包含目錄和程式，第一段 supervsord 設定軟件本身，使用 nodaemon 參數來執行。第二段包含要控制的 2 個服務。每一段包含一個服務的目錄和啟動這個服務的命令。
+設定檔案包含目錄和程式，第一段 supervsord 設定軟件本身，使用 nodaemon 參數來執行。第二段包含要控制的 2 個服務。每一段包含一個服務的目錄和啟動這個服務的命令。
 
 ### 使用方法
 建立鏡像。

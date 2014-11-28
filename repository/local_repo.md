@@ -24,11 +24,11 @@ $ sudo docker run \
          -p 5000:5000 \
          registry
 ````
-此外，還可以指定本地路徑（如 `/home/user/registry-conf` ）下的設定文件。
+此外，還可以指定本地路徑（如 `/home/user/registry-conf` ）下的設定檔案。
 ```
 $ sudo docker run -d -p 5000:5000 -v /home/user/registry-conf:/registry-conf -e DOCKER_REGISTRY_CONFIG=/registry-conf/config.yml registry
 ```
-預設情況下，倉庫會被建立在容器的 `/tmp/registry` 下。可以透過 `-v` 參數來將映像檔文件存放在本地的指定路徑。
+預設情況下，倉庫會被建立在容器的 `/tmp/registry` 下。可以透過 `-v` 參數來將映像檔檔案存放在本地的指定路徑。
 例以下面的例子將上傳的映像檔放到 `/opt/data/registry` 目錄。
 ```
 $ sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry
@@ -54,7 +54,7 @@ $ git clone https://github.com/docker/docker-registry.git
 $ cd docker-registry
 $ sudo python setup.py install
 ```
-然後修改設定文件，主要修改 dev 模板段的 `storage_path` 到本地的儲存倉庫的路徑。
+然後修改設定檔案，主要修改 dev 模板段的 `storage_path` 到本地的儲存倉庫的路徑。
 ```
 $ cp config/config_sample.yml config/config.yml
 ```
@@ -68,7 +68,7 @@ $ sudo gunicorn --access-logfile - --error-logfile - -k gevent -b 0.0.0.0:5000 -
 ```
 此時使用連結本地的 5000 端口，看到輸出 docker-registry 的版本訊息說明執行成功。
 
-*註：`config/config_sample.yml` 文件是範例設定文件。
+*註：`config/config_sample.yml` 檔案是範例設定檔案。
 
 ###在私有倉庫上傳、下載、搜索映像檔
 建立好私有倉庫之後，就可以使用 `docker tag` 來標記一個映像檔，然後推送它到倉庫，別的機器上就可以下載下來了。例如私有倉庫地址為 `192.168.7.26:5000`。

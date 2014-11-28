@@ -33,7 +33,7 @@ root@ac6474aeb31d:~# ip a
 
 ### ubuntu 示例
 下面以 ubuntu 為例建立多個主機的容器聯網:
-建立自己的網橋,編輯 /etc/network/interface 文件
+建立自己的網橋,編輯 /etc/network/interface 檔案
 ```
 auto br0
 iface br0 inet static
@@ -46,7 +46,7 @@ dns-nameservers 8.8.8.8 192.168.6.1
 ```
 將 Docker 的默認網橋綁定到這個新建的 br0 上面，這樣就將這臺機器上容器綁定到 em1 這個網卡所對應的物理網路上了。
 
-ubuntu 修改 /etc/default/docker 文件，新增最後一行內容
+ubuntu 修改 /etc/default/docker 檔案，新增最後一行內容
 
 ```
 # Docker Upstart and SysVinit configuration file
@@ -75,4 +75,4 @@ bridge name     bridge id               STP enabled     interfaces
 br0             8000.7e6e617c8d53       no              em1
                                             vethe6e5
 ```
-這樣就直接把容器暴露到物理網路上了，多臺物理主機的容器也可以相網路了。需要註意的是，這樣就需要自己來保證容器的網路安全了。
+這樣就直接把容器暴露到物理網路上了，多臺物理主機的容器也可以相網路了。需要注意的是，這樣就需要自己來保證容器的網路安全了。

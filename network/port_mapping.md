@@ -60,7 +60,7 @@ $ sudo docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py
 $ docker port nostalgic_morse 5000
 127.0.0.1:49155.
 ```
-註意：
+注意：
 <<<<<<< HEAD
 * 容器有自己的內部網路和 ip 地址（使用 `docker inspect` 可以取得所有的變量，Docker 還可以有一個可變的網路設定。）
 * -p 標記可以多次使用來綁定多個端口

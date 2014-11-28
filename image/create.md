@@ -105,7 +105,7 @@ Successfully built 324104cde6ad
 
 *注意一個映像檔不能超過 127 層
 
-此外，還可以利用 `ADD` 命令複製本地文件到映像檔；用 `EXPOSE` 命令向外部開放埠號；用 `CMD` 命令描述容器啟動後執行的程序等。例如
+此外，還可以利用 `ADD` 命令複製本地檔案到映像檔；用 `EXPOSE` 命令向外部開放埠號；用 `CMD` 命令描述容器啟動後執行的程序等。例如
 ```
 # put my local web site in myApp folder to /var/www
 ADD myApp /var/www

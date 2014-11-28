@@ -48,7 +48,7 @@ ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 格式為 `ADD <src> <dest>`。
 
 該命令將複製指定的 `<src>` 到容器中的 `<dest>`。
-其中 `<src>` 可以是 Dockerfile 所在目錄的相對路徑；也可以是一個 URL；還可以是一個 tar 文件（其複製後會自動解壓縮）。
+其中 `<src>` 可以是 Dockerfile 所在目錄的相對路徑；也可以是一個 URL；還可以是一個 tar 檔案（其複製後會自動解壓縮）。
 
 ### COPY
 格式為 `COPY <src> <dest>`。
