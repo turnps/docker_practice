@@ -2,7 +2,6 @@
 
 ### 基本訊息
 [Redis](https://en.wikipedia.org/wiki/Redis) 是開源的記憶體 Key-Value 資料庫實作。
-該倉庫提供了 Redis 2.6 ~ 2.8.9 各個版本的映像檔。
 
 ### 使用方法
 預設會在 `6379` 連接埠啟動資料庫。
