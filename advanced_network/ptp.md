@@ -38,7 +38,7 @@ $ sudo ip netns exec 3004 ip addr add 10.1.1.2/32 dev B
 $ sudo ip netns exec 3004 ip link set B up
 $ sudo ip netns exec 3004 ip route add 10.1.1.1/32 dev B
 ```
-現在這 2 個容器就可以相互 ping 通，並成功建立連接。點到點鏈路不需要子網和子網掩碼。
+現在這 2 個容器就可以相互 ping 通，並成功建立連接。點到點鏈路不需要子網和子網遮罩。
 
 此外，也可以不指定 `--net=none` 來建立點到點鏈路。這樣容器還可以透過原先的網路來通信。
 

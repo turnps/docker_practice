@@ -4,7 +4,7 @@
 
 其中有些命令選項只有在 Docker 服務啟動的時候才能設定，而且不能馬上生效。
 * `-b BRIDGE or --bridge=BRIDGE` --指定容器掛載的橋接器
-* `--bip=CIDR` --定制 docker0 的掩碼
+* `--bip=CIDR` --定制 docker0 的遮罩
 * `-H SOCKET... or --host=SOCKET...` --Docker 服務端接收命令的通道
 * `--icc=true|false` --是否支援容器之間進行通信
 * `--ip-forward=true|false` --請看下文容器之間的通信
