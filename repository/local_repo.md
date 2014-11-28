@@ -47,7 +47,7 @@ $ sudo yum install -y python-devel libevent-devel python-pip gcc xz-devel
 $ sudo python-pip install docker-registry
 ```
 
-也可以從 [docker-registry](https://github.com/docker/docker-registry) 項目下載原始碼進行安裝。
+也可以從 [docker-registry](https://github.com/docker/docker-registry) 專案下載原始碼進行安裝。
 ```
 $ sudo apt-get install build-essential python-dev libevent-dev python-pip libssl-dev liblzma-dev libffi-dev
 $ git clone https://github.com/docker/docker-registry.git
