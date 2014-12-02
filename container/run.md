@@ -13,14 +13,14 @@ Hello world
 ```
 這跟在本地直接執行 `/bin/echo 'hello world'` 相同， 幾乎感覺不出任何區別。
 
-下面的命令則啟動一個 bash 終端，允許使用者進行交互。
+下面的命令則啟動一個 bash 終端，允許使用者進行互動。
 ```
 $ sudo docker run -t -i ubuntu:14.04 /bin/bash
 root@af8bae53bdd3:/#
 ```
 其中，`-t` 選項讓Docker分配一個虛擬終端（pseudo-tty）並綁定到容器的標準輸入上， `-i` 則讓容器的標準輸入保持打開。
 
-在交互模式下，使用者可以透過所建立的終端來輸入命令，例如
+在互動模式下，使用者可以透過所建立的終端來輸入命令，例如
 ```
 root@af8bae53bdd3:/# pwd
 /
@@ -34,7 +34,7 @@ bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr
 * 利用映像檔建立並啟動一個容器
 * 分配一個檔案系統，並在唯讀的映像檔層外面掛載一層可讀寫層
 * 從宿主主機設定的網路橋界面中橋接一個虛擬埠到容器中去
-* 從地址堆中設定一個 ip 地址給容器
+* 從位址堆中設定一個 ip 位址給容器
 * 執行使用者指定的應用程式
 * 執行完畢後容器被終止
 

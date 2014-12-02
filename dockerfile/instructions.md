@@ -17,7 +17,7 @@
 每條 `RUN` 指令將在當前映像檔基底上執行指定命令，並產生新的映像檔。當命令較長時可以使用 `\` 來換行。
 
 ### CMD
-支持三種格式
+支援三種格式
 * `CMD ["executable","param1","param2"]` 使用 `exec` 執行，推薦使用；
 * `CMD command param1 param2` 在 `/bin/sh` 中執行，使用在給需要互動的指令；
 * `CMD ["param1","param2"]` 提供給 `ENTRYPOINT` 的預設參數；

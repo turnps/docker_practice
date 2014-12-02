@@ -1,5 +1,5 @@
 ## 建立 tomcat/weblogic 集群
-### 安裝 tomcat 鏡像
+### 安裝 tomcat 映像檔
 準備好需要的 jdk、tomcat 等軟件放到 home 目錄下面，啟動一個容器
 ```
 docker run -t -i -v /home:/opt/data  --name mk_tomcat ubuntu /bin/bash
@@ -24,11 +24,11 @@ FROM mk_tomcat
 EXPOSE  22 8080
 CMD ["/usr/bin/supervisord"]
 ```
-根據 Dockerfile 建立鏡像。
+根據 Dockerfile 建立映像檔。
 ```
 docker build tomcat tomcat
 ```
-### 安裝 weblogic 鏡像
+### 安裝 weblogic 映像檔
 
 步驟和 tomcat 基本一致，這裡貼一下設定檔案
 ```
@@ -48,8 +48,8 @@ EXPOSE  22 7001
 CMD ["/usr/bin/supervisord"]
 ```
 
-### tomcat/weblogic 鏡像的使用
-#### 存儲的使用
+### tomcat/weblogic 映像檔的使用
+#### 儲存的使用
 在啟動的時候，使用 `-v` 參數
 
     -v, --volume=[]            Bind mount a volume (e.g. from the host: -v /host:/container, from docker: -v /container)
