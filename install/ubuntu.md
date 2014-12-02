@@ -21,6 +21,11 @@ $ sudo apt-get update
 $ sudo apt-get install -y lxc-docker
 ```
 
+### 快速安裝法(建議使用)
+```
+$ curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+```
+
 ### 14.04 之前版本
 如果是較舊版本的 Ubuntu 系統，需要先更新核心。
 ```
