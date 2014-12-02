@@ -19,4 +19,4 @@ UTS("UNIX Time-sharing System") 命名空間允許每個容器擁有獨立的 ho
 ### user 命名空間
 每個容器可以有不同的使用者和組 id, 也就是說可以在容器內用容器內部的使用者執行程式而非主機上的使用者。
 
-*註：關於 Linux 上的命名空間，[這篇文章](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/) 介紹的很好。
+*註：關於 Linux 上的命名空間，[這篇文章](http://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/) 介紹的很好，另外 [Michael Crosby - Creating containers - Part 1](http://crosbymichael.com/creating-containers-part-1.html) 也非常推薦。。
