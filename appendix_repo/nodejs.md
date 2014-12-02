@@ -2,7 +2,7 @@
 
 ### 基本訊息
 [Node.js](https://en.wikipedia.org/wiki/Node.js)是基於 JavaScript 的可擴展服務端和網路軟件開發平台。
-該倉庫提供了 Node.js 0.8 ~ 0.11 各個版本的鏡像。
+該倉庫提供了 Node.js 0.8 ~ 0.11 各個版本的映像檔。
 
 ### 使用方法
 在專案中建立一個 Dockerfile。
@@ -11,7 +11,7 @@ FROM node:0.10-onbuild
 # replace this with your application's default port
 EXPOSE 8888
 ```
-然後建立鏡像，並啟動容器
+然後建立映像檔，並啟動容器
 ```
 $ sudo docker build -t my-nodejs-app
 $ sudo docker run -it --rm --name my-running-app my-nodejs-app

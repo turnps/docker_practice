@@ -61,7 +61,7 @@ Dockerfile 基本的語法是
 * 接著是維護者的信息
 * `RUN`開頭的指令會在建立中執行，比如安裝一個套件，在這裏使用 apt-get 來安裝了一些套件
 
-完成 Dockerfile 後可以使用 `docker build` 生成映像檔。
+完成 Dockerfile 後可以使用 `docker build` 建立映像檔。
 
 ```
 $ sudo docker build -t="ouruser/sinatra:v2" .
@@ -134,7 +134,7 @@ ouruser/sinatra     v2      5db5f8471261  11 hours ago   446.7 MB
 
 ### 從本機導入
 要從本機導入一個映像檔，可以使用 openvz（容器虛擬化的先鋒技術）的模板來建立：
-openvz 的模板下載地址為 http://openvz.org/Download/templates/precreated。
+openvz 的模板下載位址為 http://openvz.org/Download/templates/precreated。
 
 比如，先下載一個 ubuntu-14.04 的映像檔，之後使用以下命令導入：
 ```

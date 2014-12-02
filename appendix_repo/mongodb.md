@@ -2,7 +2,7 @@
 
 ### 基本訊息
 [MongoDB](https://en.wikipedia.org/wiki/MongoDB) 是開源的 NoSQL 資料庫實作。
-該倉庫提供了 MongoDB 2.2 ~ 2.7 各個版本的鏡像。
+該倉庫提供了 MongoDB 2.2 ~ 2.7 各個版本的映像檔。
 
 ### 使用方法
 預設會在 `27017` 連接埠啟動資料庫。

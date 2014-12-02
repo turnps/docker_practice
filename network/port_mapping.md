@@ -21,19 +21,19 @@ $ sudo docker logs -f nostalgic_morse
 
 -p（小寫的）則可以指定要映射的連接埠，並且在一個指定連接埠上只可以綁定一個容器。支援的格式有 `ip:hostPort:containerPort | ip::containerPort | hostPort:containerPort`。
 
-### 映射所有遠端地址
+### 映射所有遠端位址
 使用 `hostPort:containerPort` 格式本地的 5000 連接埠映射到容器的 5000 連接埠，可以執行
 ```
 $ sudo docker run -d -p 5000:5000 training/webapp python app.py
 ```
-此時預設會綁定本地所有遠端上的所有地址。
+此時預設會綁定本地所有遠端上的所有位址。
 
-### 映射到指定地址的指定連接埠
-可以使用 `ip:hostPort:containerPort` 格式指定映射使用一個特定地址，比如 localhost 地址 127.0.0.1
+### 映射到指定位址的指定連接埠
+可以使用 `ip:hostPort:containerPort` 格式指定映射使用一個特定位址，比如 localhost 位址 127.0.0.1
 ```
 $ sudo docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
 ```
-### 映射到指定地址的任意連接埠
+### 映射到指定位址的任意連接埠
 使用 `ip::containerPort` 綁定 localhost 的任意連接埠到容器的 5000 連接埠，本地主機會自動分配一個連接埠。
 ```
 $ sudo docker run -d -p 127.0.0.1::5000 training/webapp python app.py
@@ -49,7 +49,7 @@ $ docker port nostalgic_morse 5000
 127.0.0.1:49155.
 ```
 注意：
-* 容器有自己的內部網路和 ip 地址（使用 `docker inspect` 可以獲取所有的變數，Docker 還可以有一個可變的網路設定。）
+* 容器有自己的內部網路和 ip 位址（使用 `docker inspect` 可以獲取所有的變數，Docker 還可以有一個可變的網路設定。）
 * -p 標記可以多次使用來綁定多個連接埠
 
 例如
