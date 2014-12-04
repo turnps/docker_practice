@@ -120,7 +120,7 @@ CMD ["/usr/sbin/apachectl", "-D", "FOREGROUND"]
 $ sudo docker run -t -i ouruser/sinatra:v2 /bin/bash
 root@8196968dac35:/#
 ```
-還可以用 `docker tag` 命令修改映像檔的標簽。
+還可以用 `docker tag` 命令修改映像檔的標籤。
 ```
 $ sudo docker tag 5db5f8471261 ouruser/sinatra:devel
 $ sudo docker images ouruser/sinatra

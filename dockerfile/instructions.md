@@ -114,4 +114,4 @@ ADD . /app/src
 RUN /usr/local/bin/python-build --dir /app/src
 ```
 
-使用 `ONBUILD` 指令的映像檔，推薦在標簽中註明，例如 `ruby:1.9-onbuild`。
+使用 `ONBUILD` 指令的映像檔，推薦在標籤中註明，例如 `ruby:1.9-onbuild`。

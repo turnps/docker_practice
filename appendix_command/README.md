@@ -149,7 +149,7 @@ Docker 的命令可以採用 `docker-CMD` 或者 `docker CMD` 的方式執行。
         終止一個執行中的容器
 
     docker-tag(1)
-        為一個映像檔打標簽
+        為一個映像檔打標籤
 
     docker-top(1)
         查看一個容器中的正在執行的程式資訊
