@@ -10,7 +10,7 @@ root@0b2616b0e5a8:/#
 ```
 注意：記住容器的 ID，稍後還會用到。
 
-在容器中加入 json 和 gem 套件。
+在容器中加入 json 的 gem 套件。
 ```
 root@0b2616b0e5a8:/# gem install json
 ```
@@ -132,15 +132,15 @@ ouruser/sinatra     v2      5db5f8471261  11 hours ago   446.7 MB
 
 *註：更多用法，請參考 [Dockerfile](../dockerfile/README.md) 章節。
 
-### 從本機導入
-要從本機導入一個映像檔，可以使用 openvz（容器虛擬化的先鋒技術）的模板來建立：
-openvz 的模板下載位址為 http://openvz.org/Download/templates/precreated。
+### 從本機匯入
+要從本機匯入一個映像檔，可以使用 OpenVZ（容器虛擬化的先鋒技術）的模板來建立：
+OpenVZ 的模板下載位址為 http://openvz.org/Download/templates/precreated。
 
-比如，先下載一個 ubuntu-14.04 的映像檔，之後使用以下命令導入：
+比如，先下載一個 ubuntu-14.04 的映像檔，之後使用以下命令匯入：
 ```
 sudo cat ubuntu-14.04-x86_64-minimal.tar.gz  |docker import - ubuntu:14.04
 ```
-然後查看新導入的映像檔。
+然後查看新匯入的映像檔。
 ```
 docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE

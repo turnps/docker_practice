@@ -11,7 +11,7 @@ $sudo docker save -o ubuntu_14.04.tar ubuntu:14.04
 ```
 
 ### 載入映像檔
-可以使用 `docker load` 從建立的本地檔案中再導入到本地映像檔庫，例如
+可以使用 `docker load` 從建立的本地檔案中再匯入到本地映像檔庫，例如
 ```
 $ sudo docker load --input ubuntu_14.04.tar
 ```
@@ -19,4 +19,4 @@ $ sudo docker load --input ubuntu_14.04.tar
 ```
 $ sudo docker load < ubuntu_14.04.tar
 ```
-這將導入映像檔以及其相關的元資料信息（包括標簽等）。
+這將匯入映像檔以及其相關的元資料信息（包括標簽等）。
