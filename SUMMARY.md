@@ -23,7 +23,7 @@
    * [守護態執行](container/daemon.md)
    * [終止](container/stop.md)
    * [進入容器](container/enter.md)
-   * [導出與導入](container/import_export.md)
+   * [匯出與匯入](container/import_export.md)
    * [刪除](container/rm.md)
 * [倉庫](repository/README.md)
    * [Docker Hub](repository/dockerhub.md)
