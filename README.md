@@ -7,7 +7,7 @@ v0.2.9
 
 本書既適用於具備基礎 Linux 知識的 Docker 初學者，也可供希望理解原理和實作的進階使用者參考。同時，書中給出的實踐案例，可供在進行實際部署時借鑒。
 
-本書源於 [WaitFish](github.com/qcpm1983) 的《[Docker 學習手冊 v1.0](https://github.com/yeasy/docker_practice/raw/master/_local/docker_manual_waitfish.pdf)》內容。後來，[yeasy](github.com/yeasy)
+本書源於 [WaitFish](https://github.com/Waitfish) 的《[Docker 學習手冊 v1.0](https://github.com/yeasy/docker_practice/raw/master/_local/docker_manual_waitfish.pdf)》內容。後來，[yeasy](https://github.com/yeasy)
 根據最新 Docker 版本對內容進行了修訂和重寫，並增加內容；經協商將所有內容開源，採用網路合作的方式進行維護。
 
 前六章為基礎內容，供使用者理解 Docker 的基本概念和操作；7 ~ 9 章介紹一些進階操作；第 10 章給出典型的應用場景和實踐案例；11 ~ 13 章介紹關於 Docker 實作的相關技術。
