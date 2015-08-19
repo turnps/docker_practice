@@ -38,7 +38,7 @@ $ sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry
 對於 Ubuntu 或 CentOS 等發行版，可以直接透過套件庫安裝。
 * Ubuntu
 ```
-$ sudo apt-get install -y build-essential python-dev libevent-dev python-pip liblzma-dev
+$ sudo apt-get install -y build-essential python-dev libevent-dev python-pip liblzma-dev swig
 $ sudo pip install docker-registry
 ```
 * CentOS
