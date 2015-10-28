@@ -13,7 +13,7 @@ CenturyLinkLabs 釋出 [dockerfile-from-image](https://github.com/CenturyLinkLab
 那 `<IMAGE_TAG_OR_ID>` 參數可以任何包含 tag 的映像檔名稱。
 
 ### 範例
-以下是個試範，如何將官方 Ruby 的映像檔來產生出 Dockerfile。
+以下是個示範，如何將官方 Ruby 的映像檔來產生出 Dockerfile。
 
     $ docker pull ruby
     Pulling repository ruby
