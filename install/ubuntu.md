@@ -6,7 +6,7 @@ Ubuntu 14.04 版本套件庫中已經內建了 Docker 套件，可以直接安�
 $ sudo apt-get update
 $ sudo apt-get install -y docker.io
 $ sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
-$ sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+$ sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker
 ```
 
 如果使用作業系統內建套件安裝 Docker，目前安裝的版本是比較舊的 0.9.1。 要安裝更新的版本，可以透過更新 Docker 套件庫的方式進行安裝。
