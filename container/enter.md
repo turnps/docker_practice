@@ -1,5 +1,5 @@
 ## 進入容器
-在使用 `-d` 參數時，容器啟動後會進入後臺。
+在使用 `-d` 參數時，容器啟動後會進入背景執行。
 某些時候需要進入容器進行操作，有很多種方法，包括使用 `docker attach` 命令或 `nsenter` 工具等。
 ### exec 命令
 `docker exec` 是Docker內建的命令。下面示範如何使用該命令。
@@ -23,6 +23,9 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 $sudo docker attach nostalgic_hypatia
 root@243c32535da7:/#
 ```
+
+按下 `ctrl` + `P` 然後 `ctrl` + `Q` 跳離容器，讓它繼續在背景執行。
+  
 但是使用 `attach` 命令有時候並不方便。當多個窗口同時 attach 到同一個容器的時候，所有窗口都會同步顯示。當某個窗口因命令阻塞時,其他窗口也無法執行操作了。
 
 ### nsenter 命令
